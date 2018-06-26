@@ -1,14 +1,20 @@
+require 'byebug'
 class SongsController < ApplicationController
   def index
+    @songs = Song.all
   end
 
   def show
+    @song = Song.find(params[:id])
   end
 
   def new
+    @song = Song.new
+    @artists = Artist.all
   end
 
   def create
+    byebug
     @song = Song.new(song_params)
 
     if @song.save

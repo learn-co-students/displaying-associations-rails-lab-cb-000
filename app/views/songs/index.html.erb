@@ -1,0 +1,7 @@
+<% if @songs.nil? %>
+  There are no songs to display
+<% else %>
+      <% @songs.each do |song| %>
+          <a href="<%= song_path(song) %>"> <%= song.artist_name %> - <%= song.title %> </a><br/>
+      <% end %>
+<% end %>
