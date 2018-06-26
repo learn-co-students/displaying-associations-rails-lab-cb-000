@@ -1,3 +1,4 @@
+require 'byebug'
 require 'rails_helper'
 
 describe "artists", type:  :feature do
