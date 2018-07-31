@@ -4,8 +4,9 @@
   <%= f.label :title %>
   <%= f.text_field :title %>
   <br />
+  <%= f.label :artist_id, 'Artist:' %><br>
+  <%= f.collection_radio_buttons :artist_id, @artists, :id, :name %>
+  <br />
 
   <%= f.submit %>
 <% end %>
-
-
