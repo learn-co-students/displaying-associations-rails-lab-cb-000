@@ -1,11 +1,12 @@
-<h1>Editing <%= @song.name %></h1>
+<h1>Editing Song</h1>
 
 <%= form_for @song  do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
   <br />
+  <%= f.label :artist_id, 'Artist:' %><br>
+  <%= f.collection_radio_buttons :artist_id, @artists, :id, :name %>
+  <br />
 
   <%= f.submit %>
 <% end %>
-
-
