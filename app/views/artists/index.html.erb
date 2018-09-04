@@ -1,0 +1,8 @@
+<h1>Welcome to the Artist Index</h1>
+
+<ul>
+  <% @artists.each do |a| %>
+    <li><%= link_to a.name + " - " + a.song_count.to_s + " songs", artist_path(a) %></li>
+  <% end %>
+</u>
+
