@@ -1,2 +1,8 @@
-class Artist < ActiveRecord::Base[4.2]
+class Artist < ActiveRecord::Base
+  has_many :songs
+
+  def song_count
+    songs.all.count
+  end
+
 end
