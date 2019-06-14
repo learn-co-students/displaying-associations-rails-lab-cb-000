@@ -1,0 +1,5 @@
+<%= content_tag :h1, @song.title %>
+
+  <%= content_tag :p do %>
+  Artist: <%= link_to @song.artist_name, artist_path(@song.artist) %>
+  <% end %>

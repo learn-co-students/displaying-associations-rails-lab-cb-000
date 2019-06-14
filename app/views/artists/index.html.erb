@@ -1,0 +1,5 @@
+<%= content_tag :h1, "Artists" %>
+
+<%= div_for @artists do |a|%>
+  <%= link_to "#{a.name} - #{a.song_count} songs", artist_path(a) %>
+<% end %>

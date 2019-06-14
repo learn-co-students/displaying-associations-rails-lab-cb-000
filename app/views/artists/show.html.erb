@@ -1,0 +1,13 @@
+<%= content_tag :h1, @artist.name %>
+
+<%= div_for @artist do |s| %>
+  <%= content_tag :h3, "#{@artist.song_count} songs" %>
+
+  <%= content_tag :ul do %>
+    <%= @artist.songs.each do |s| %>
+      <%= content_tag :li do %>
+        <%= link_to s.title, song_path(s) %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
