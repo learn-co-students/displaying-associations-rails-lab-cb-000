@@ -1,0 +1,9 @@
+
+      <li><%= link_to @song.artist.name, artist_path(@song.artist) %></li>
+
+
+
+it "links to the artist" do
+    visit song_path(@song)
+    expect(page).to have_link("Daft Punk", href: artist_path(@artist))
+  end
