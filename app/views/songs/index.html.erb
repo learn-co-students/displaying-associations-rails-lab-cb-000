@@ -1,0 +1,9 @@
+<h1>List Of Songs</h1>
+
+<ul>
+<% @songs.each do |song| %>
+  <li><%= link_to "#{song.artist_name} - #{song.title}", song_path(song) %></li>
+<% end %>
+</ul>
+<%= button_to "Add Song", new_song_path, html_options = { :method => :get } %>
+<%= button_to "List Artist", artists_path, html_options = { :method => :get } %>
