@@ -1,0 +1,10 @@
+<h1><%= @artist.name %></h1>
+
+<h3>Song List: </h3>
+<ul>
+  <% @artist.songs.each do |song| %>
+  <li><%= link_to song.title, song_path(song) %></li>
+  <% end %>
+</ul>
+
+<%= button_to "List Artist", artists_path, html_options = { :method => :get} %>

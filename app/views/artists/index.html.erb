@@ -1,0 +1,10 @@
+<h1>List of all Artist</h1>
+
+<ul>
+<% @artists.each do |artist| %>
+  <li><%= link_to artist.name, artist_path(artist) %>:<%= pluralize(artist.song_count, "song") %></li>
+<% end %>
+</ul>
+
+<%= button_to "Add Artist", new_artist_path, html_options = { :method => :get } %>
+<%= button_to "List Songs", songs_path, html_options = { :method => :get } %>
