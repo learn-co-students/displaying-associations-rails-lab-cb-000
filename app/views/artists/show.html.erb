@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= @artist.name %></title>
+    </head>
+    <body>
+    <h1><%= @artist.name %></h1>
+    <h2><%= pluralize(@artist.song_count, "Song") %>...</h2>
+    <ul>
+        <% @artist.songs.each do |song| %>
+            <li><%= link_to song.title, song_path(song) %></li>
+        <% end %>
+    </ul>
+    </body>
+</html>
